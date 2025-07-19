@@ -145,9 +145,23 @@ main>section {
     border-left: 5px solid #FF900E;
     padding-left: 21px;
 }
-.features-2{
-    gap: 100px;
 
+.features-2 {
+    gap: 100px;
+}
+
+#experience-badge {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 45px 42px;
+    margin-left: -100px;
+    margin-top: -130px;
+
+}
+
+#experience-years {
+    font-size: 4rem;
+    font-weight: 700;
 }
 
 .features-card {
@@ -227,6 +241,14 @@ main>section {
     grid-template-columns: repeat(5, 1fr);
     filter: grayscale(100%);
 }
+footer{
+    padding: 40px 410px;
+    border-radius: 8px;
+    background-color: rgb(255, 244, 231);
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: center;
+}
 
 
 
@@ -234,7 +256,8 @@ main>section {
 @media screen and (max-width:576px) {
 
     .navbar,
-    .nav-content {
+    .nav-content,
+    .features-2 {
         flex-direction: column;
     }
 
@@ -244,7 +267,8 @@ main>section {
 
     .team-img,
     .facts-card-container,
-    .sponsor-img {
+    .sponsor-img,
+    . {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -266,22 +290,43 @@ main>section {
         justify-items: center;
         gap: 50px;
     }
-}
 
-/* medium or tab device */
-@media screen and (min-width:576px) and (max-width:968px) {
-    .teams {
-        flex-direction: column;
+    .features-2 {
+        margin-top: 50px;
     }
 
-    .team-features {
-        margin: 50px auto;
+    .features-card {
+        margin-bottom: 0px;
+        padding: 20px;
     }
 
-    .facts-card-container,
-    .sponsor-img {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        justify-items: center;
+    .architect-img img {
+        width: 100%;
     }
-}
+
+    #experience-badge {
+        padding: 35px 32px;
+        margin-left: 20px;
+        margin-top: 20px;
+
+    }
+
+    /* medium or tab device */
+    @media screen and (min-width:576px) and (max-width:968px) {
+
+        .teams,
+        .features-2 {
+            flex-direction: column;
+        }
+
+        .team-features {
+            margin: 50px auto;
+        }
+
+        .facts-card-container,
+        .sponsor-img {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+    }
